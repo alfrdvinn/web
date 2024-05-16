@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>by sza</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>By sza</title>
     <link rel="icon" type="image/png" href="https://telegra.ph/file/393f159d71527e567ca28.jpg">
     <style>
         body {
@@ -17,6 +17,7 @@
             height: 100vh;
             margin: 0;
             text-align: center;
+            user-select: none; /* Mencegah penyalinan teks */
         }
 
         .content {
@@ -56,10 +57,24 @@
 <body>
     <img src="https://telegra.ph/file/393f159d71527e567ca28.jpg" alt="Profile Picture">
     <div class="content">
-        <p>I'm Sza or Iza, I'm an ordinary person who doesn't usually do anything strange, I like playing games, coding, learning new things and I did some legal secret organizations at school. <span class="highlight">I don't do hacking or anything illegal at all.</span> I just buy and sell numbers and live a weird life.</p>
+        <p>I'm sza or iza, I'm an ordinary person who doesn't usually do anything strange, I like playing games, coding, learning new things and I did some legal secret organizations at school. <span class="highlight">I don't do hacking or anything illegal at all.</span> I just buy and sell numbers and live a weird life.</p>
     </div>
     <div class="link">
         <a href="https://t.me/izawithu">sza here</a>
     </div>
+    <script>
+        // Mencegah zoom in dan zoom out menggunakan gerakan pinch atau kontrol keyboard
+        document.addEventListener('wheel', function(e) {
+            if (e.ctrlKey) {
+                e.preventDefault();
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && (e.key === '+' || e.key === '-' || e.key === '0')) {
+                e.preventDefault();
+            }
+        });
+    </script>
 </body>
 </html>
