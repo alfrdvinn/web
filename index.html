@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>By sza</title>
-    <link rel="icon" type="image/png" href="https://telegra.ph/file/393f159d71527e567ca28.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sza</title>
+    <link rel="icon" href="https://telegra.ph/file/c2bb895a719d7b1ed33a8.jpg">
     <style>
         body {
             background-color: #121212;
-            color: #e0e0e0;
+            color: #FFFFFF;
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
@@ -16,65 +16,53 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+        }
+        .center-content {
             text-align: center;
-            user-select: none; /* Mencegah penyalinan teks */
         }
-
-        .content {
-            max-width: 600px;
+        .center-content img {
+            width: 150px;
+            height: auto;
         }
-
-        .content p {
-            font-style: italic;
-        }
-
-        .content .highlight {
-            text-decoration: underline;
-        }
-
-        .link {
-            margin-top: 20px;
-        }
-
-        .link a {
-            color: #03a9f4;
+        .center-content a {
+            color: #1E90FF;
             text-decoration: none;
-            font-weight: bold;
         }
-
-        .link a:hover {
-            text-decoration: underline;
+        table {
+            margin-top: 20px;
+            border-collapse: collapse;
+            width: 50%;
         }
-
-        img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-bottom: 20px;
+        table, th, td {
+            border: 1px solid #FFFFFF;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <img src="https://telegra.ph/file/393f159d71527e567ca28.jpg" alt="Profile Picture">
-    <div class="content">
-        <p>I'm sza or iza, I'm an ordinary person who doesn't usually do anything strange, I like playing games, coding, learning new things and I did some legal secret organizations at school. <span class="highlight">I don't do hacking or anything illegal at all.</span> I just buy and sell numbers and live a weird life.</p>
+    <div class="center-content">
+        <img src="https://telegra.ph/file/c2bb895a719d7b1ed33a8.jpg" alt="Icon">
+        <h1><a href="https://t.me/izawithu">Evárys sza</a></h1>
+        <table>
+            <tr>
+                <td>Nokos Telegram</td>
+                <td><a href="https://t.me/izanokosmarket">klik di sini</a></td>
+            </tr>
+            <tr>
+                <td>Testimoni</td>
+                <td><a href="https://t.me/proofizaw">klik di sini</a></td>
+            </tr>
+        </table>
+        <div class="footer">
+            <p><a href="https://t.me/izawithu">Powered By sza</a></p>
+        </div>
     </div>
-    <div class="link">
-        <a href="https://t.me/mscaza">sza here</a>
-    </div>
-    <script>
-        // Mencegah zoom in dan zoom out menggunakan gerakan pinch atau kontrol keyboard
-        document.addEventListener('wheel', function(e) {
-            if (e.ctrlKey) {
-                e.preventDefault();
-            }
-        });
-
-        document.addEventListener('keydown', function(e) {
-            if ((e.ctrlKey || e.metaKey) && (e.key === '+' || e.key === '-' || e.key === '0')) {
-                e.preventDefault();
-            }
-        });
-    </script>
 </body>
 </html>
