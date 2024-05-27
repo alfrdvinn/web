@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
     <style>
         body {
             background-color: #121212;
-            color: #FFFFFF;
+            color: #ffffff;
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
@@ -16,53 +16,94 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            overflow: hidden;
         }
-        .center-content {
+
+        .container {
             text-align: center;
         }
-        .center-content img {
+
+        .circle-icon {
+            background-image: url('https://telegra.ph/file/c2bb895a719d7b1ed33a8.jpg');
+            background-size: cover;
             width: 150px;
-            height: auto;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
         }
-        .center-content a {
+
+        .name a, .links a, footer a {
             color: #1E90FF;
             text-decoration: none;
         }
-        table {
-            margin-top: 20px;
-            border-collapse: collapse;
-            width: 50%;
+
+        .links {
+            margin: 20px 0;
         }
-        table, th, td {
-            border: 1px solid #FFFFFF;
+
+        footer {
+            margin-top: 30px;
         }
-        th, td {
-            padding: 10px;
-            text-align: center;
+
+        /* Disable copy-paste, screenshot, zoom in and out */
+        body {
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-drag: none;
         }
-        .footer {
-            margin-top: 20px;
-            text-align: center;
+
+        body * {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* Prevent zooming */
+        body {
+            touch-action: pan-x pan-y;
+        }
+
+        @media (min-width: 1px) {
+            html {
+                touch-action: manipulation;
+                -ms-touch-action: manipulation;
+            }
+        }
+
+        @media (max-width: 10000px) {
+            html {
+                touch-action: manipulation;
+                -ms-touch-action: manipulation;
+            }
         }
     </style>
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        document.addEventListener('keydown', function(event) {
+            if (event.ctrlKey || event.metaKey) {
+                event.preventDefault();
+            }
+        });
+    </script>
 </head>
 <body>
-    <div class="center-content">
-        <img src="https://telegra.ph/file/c2bb895a719d7b1ed33a8.jpg" alt="Icon">
-        <h1><a href="https://t.me/izawithu">Evárys sza</a></h1>
-        <table>
-            <tr>
-                <td>Nokos Telegram</td>
-                <td><a href="https://t.me/izanokosmarket">klik di sini</a></td>
-            </tr>
-            <tr>
-                <td>Testimoni</td>
-                <td><a href="https://t.me/proofizaw">klik di sini</a></td>
-            </tr>
-        </table>
-        <div class="footer">
-            <p><a href="https://t.me/izawithu">Powered By sza</a></p>
+    <div class="container">
+        <div class="circle-icon"></div>
+        <div class="name">
+            <a href="https://t.me/izawithu">Evárys sza</a>
+        </div>
+        <div class="links">
+            <a href="https://t.me/izanokosmarket">sza Marketplace</a> | 
+            <a href="https://t.me/proofizaw">testimoni klik di sini</a>
         </div>
     </div>
+    <footer>
+        <a href="https://t.me/izawithu">Powered By sza</a>
+    </footer>
 </body>
 </html>
